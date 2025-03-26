@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savant语音服务器</title>
+    <title>SAVANT 语音网桥</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,28 +67,27 @@
         }
 
         </style>
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <img src="Icon/savant-white.svg" alt="Logo" style="position: absolute; top: 40px; left: 20px; width: 128px; height: 128px;">
+        <img src="Icon/savant-white.svg" alt="Logo" style="position: absolute; top: 10px; left: 20px; width: 128px; height: 128px;">
 
-        <h1 style="text-align: center; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); font-size: 4em;">Savant语音服务器</h1>
+        <h1 style="text-align: center; position: absolute; top: 120px; left: 50%; transform: translateX(-50%); font-size: 4em;">SAVANT 语音网桥</h1>
 
         <div class="services" style="text-align: center;">
             <div class="service">
                 <a href="http://'+window.location.hostname+':8581" target="_blank">
                     <img src="Icon/homebridge.svg" alt="Homebridge">
                     <h2>Homebridge</h2>
-                    <p>智能家居桥接器</p>
+                    <p>HomeKit网桥</p>
                 </a>
             </div>
             <div class="service">
                 <a href="http://'+window.location.hostname+':9899" target="_blank">
                     <img src="Icon/savant-pro-app.svg" alt="LightingAddress">
                     <h2>LightingAddress</h2>
-                    <p>设备地址</p>
+                    <p>灯光设备地址</p>
                 </a>
             </div>
             <div class="service">
@@ -109,15 +108,6 @@
         </div>
     </div>
 
-    <script>
-        // 动态替换所有链接中的主机名
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                link.href = link.href.replace(/'\+window\.location\.hostname\+'/, window.location.hostname);
-            });
-        });
-    </script>
 </body>
 
 </html>
