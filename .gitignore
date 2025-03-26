@@ -1,0 +1,33 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore editor files
+.idea/
+.vscode/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore build files
+dist/
+build/
+
+# Ignore local env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore generated files
+*.min.js
+*.min.css
+
+# Ignore npm/yarn lock files
+package-lock.json
+yarn.lock

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savant语音服务器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            gap: 64px;
+        }
+        .service {
+            /* background-color: #2d2d44; */
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            width: 100%; /* 确保宽度一致 */
+            box-sizing: border-box; /* 包含内边距和边框 */
+        }
+        .service:hover {
+            transform: translateY(-5px);
+        }
+        .service a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .service img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+        }
+        .service h2, .service p {
+            display: inline;
+            margin: 0 5px;
+            white-space: nowrap; /* 新增样式，让内容在同一行显示 */
+            vertical-align: middle; /* 新增样式，让文字垂直居中 */
+        }
+        .service p {
+            margin: 0;
+            color: #a0a0c0;
+        }
+        img[alt="Logo"] {
+            width: 256px;
+            height: 256px;
+        }
+
+        </style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="Icon/savant-white.svg" alt="Logo" style="position: absolute; top: 40px; left: 20px; width: 128px; height: 128px;">
+
+        <h1 style="text-align: center; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); font-size: 4em;">Savant语音服务器</h1>
+
+        <div class="services" style="text-align: center;">
+            <div class="service">
+                <a href="http://'+window.location.hostname+':8581">
+                    <img src="Icon/homebridge.svg" alt="Homebridge">
+                    <h2>Homebridge</h2>
+                    <p>智能家居桥接器</p>
+                </a>
+            </div>
+            <div class="service">
+                <a href="http://'+window.location.hostname+':9899">
+                    <img src="Icon/savant-pro-app.svg" alt="LightingAddress">
+                    <h2>LightingAddress</h2>
+                    <p>设备地址</p>
+                </a>
+            </div>
+            <div class="service">
+                <a href="http://'+window.location.hostname+':8123">
+                    <img src="Icon/home-assistant.svg" alt="Home Assistant">
+                    <h2>Home Assistant</h2>
+                    <p>智能家居控制中心</p>
+                </a>
+            </div>
+            <div class="service">
+                <a href="http://'+window.location.hostname+':1880">
+                    <img src="Icon/node-red.svg" alt="Node-RED">
+                    <h2>Node-RED</h2>
+                    <p>自动化编程平台</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // 动态替换所有链接中的主机名
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.href = link.href.replace(/'\+window\.location\.hostname\+'/, window.location.hostname);
+            });
+        });
+    </script>
+</body>
+
+</html>
